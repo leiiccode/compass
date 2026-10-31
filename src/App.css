@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+[id] {
+  scroll-margin-top: 72px;
+}
+
 .app-shell {
   min-height: 100vh;
   display: flex;
@@ -20,7 +24,7 @@
   z-index: 5;
   flex: 0 0 auto;
   height: 72px;
-  background: rgb(245 248 246 / 94%);
+  background: rgb(250 248 247 / 94%);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
@@ -127,8 +131,8 @@
 }
 
 .button:hover {
-  background: #173b2b;
-  border-color: #173b2b;
+  background: #416756;
+  border-color: #416756;
   transform: translateY(-1px);
 }
 
@@ -230,7 +234,7 @@ p {
 h1,
 h2,
 h3 {
-  color: var(--green);
+  color: var(--ink);
 }
 
 h1 {
@@ -266,6 +270,10 @@ p {
 
 .hero-copy h1 {
   margin-top: 14px;
+}
+
+.hero-highlight {
+  color: #95661c;
 }
 
 .lead {
@@ -317,16 +325,55 @@ p {
   padding: 18px;
 }
 
+.principle-card:nth-child(4n + 1) {
+  background: var(--rose-soft);
+}
+
+.principle-card:nth-child(4n + 2) {
+  background: var(--lavender-soft);
+}
+
+.principle-card:nth-child(4n + 3) {
+  background: var(--blue-soft);
+}
+
+.principle-card:nth-child(4n) {
+  background: var(--peach-soft);
+}
+
+.principle-card:nth-child(4n + 1) h3 {
+  color: var(--rose-ink);
+}
+
+.principle-card:nth-child(4n + 2) h3 {
+  color: var(--lavender-ink);
+}
+
+.principle-card:nth-child(4n + 3) h3 {
+  color: var(--blue-ink);
+}
+
+.principle-card:nth-child(4n) h3 {
+  color: var(--peach-ink);
+}
+
 .principle-icon,
 .service-icon {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 62px;
+  height: 62px;
   place-items: center;
-  margin-bottom: 14px;
-  color: var(--green);
-  border-radius: 11px;
-  background: var(--green-soft);
+  margin-bottom: 12px;
+}
+
+.principle-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.illustration {
+  overflow: visible;
+  filter: drop-shadow(0 4px 3px rgb(35 77 60 / 10%));
 }
 
 .principle-card p,
@@ -347,10 +394,11 @@ p {
   padding: clamp(24px, 4vw, 44px);
   border: 1px solid var(--line);
   border-radius: 22px;
-  background: var(--green-soft);
+  background: var(--lavender-soft);
 }
 
 .about-highlight h1 {
+  color: var(--lavender-ink);
   margin-top: 14px;
   font-size: clamp(28px, 3.2vw, 40px);
 }
@@ -398,14 +446,14 @@ p {
   overflow: hidden;
   margin-bottom: 26px;
   padding: clamp(24px, 4vw, 42px);
-  color: #fff;
+  color: var(--ink);
   border-radius: 24px;
-  background: var(--green);
+  background: var(--green-soft);
 }
 
 .team-banner .eyebrow,
 .team-banner h1 {
-  color: #fff;
+  color: var(--green);
 }
 
 .team-banner h1 {
@@ -416,14 +464,14 @@ p {
 .team-banner p {
   max-width: 570px;
   margin-bottom: 0;
-  color: #e0e9e3;
+  color: var(--muted);
 }
 
 .team-banner-photo {
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 2;
-  border: 1px solid rgb(255 255 255 / 35%);
+  border: 1px solid rgb(82 123 107 / 18%);
   border-radius: 15px;
   object-fit: contain;
 }
@@ -454,13 +502,37 @@ p {
   transform: translateY(-2px);
 }
 
+.member-card:nth-child(3n + 1) {
+  background: #fff9f7;
+}
+
+.member-card:nth-child(3n + 2) {
+  background: #faf8fd;
+}
+
+.member-card:nth-child(3n) {
+  background: #f5f9fb;
+}
+
+.member-card:nth-child(3n + 1) .member-content > strong {
+  color: var(--rose-ink);
+}
+
+.member-card:nth-child(3n + 2) .member-content > strong {
+  color: var(--lavender-ink);
+}
+
+.member-card:nth-child(3n) .member-content > strong {
+  color: var(--blue-ink);
+}
+
 .member-photo,
 .profile-photo {
   display: block;
   flex: 0 0 auto;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: var(--green-soft);
+  background: var(--blue-soft);
 }
 
 .member-photo {
@@ -537,7 +609,7 @@ p {
   text-align: center;
   border: 1px solid var(--line);
   border-radius: 24px;
-  background: var(--surface);
+  background: var(--lavender-soft);
   box-shadow: var(--shadow);
 }
 
@@ -583,7 +655,7 @@ p {
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 13px;
-  background: var(--green-soft);
+  background: var(--peach-soft);
 }
 
 .profile-cta div {
@@ -629,6 +701,54 @@ p {
   padding: 22px;
 }
 
+.service-card:nth-child(6n + 1) {
+  background: var(--rose-soft);
+}
+
+.service-card:nth-child(6n + 2) {
+  background: var(--blue-soft);
+}
+
+.service-card:nth-child(6n + 3) {
+  background: var(--peach-soft);
+}
+
+.service-card:nth-child(6n + 4) {
+  background: var(--lavender-soft);
+}
+
+.service-card:nth-child(6n + 5) {
+  background: #edf3ee;
+}
+
+.service-card:nth-child(6n) {
+  background: #f7f1e8;
+}
+
+.service-card:nth-child(6n + 1) h2 {
+  color: var(--rose-ink);
+}
+
+.service-card:nth-child(6n + 2) h2 {
+  color: var(--blue-ink);
+}
+
+.service-card:nth-child(6n + 3) h2 {
+  color: var(--peach-ink);
+}
+
+.service-card:nth-child(6n + 4) h2 {
+  color: var(--lavender-ink);
+}
+
+.service-card:nth-child(6n + 5) h2 {
+  color: var(--green);
+}
+
+.service-card:nth-child(6n) h2 {
+  color: #8d744f;
+}
+
 .service-card h2 {
   margin-bottom: 8px;
   font-size: 16px;
@@ -655,7 +775,7 @@ p {
   min-height: 320px;
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: var(--green-soft);
+  background: var(--blue-soft);
 }
 
 .location-card {
@@ -666,11 +786,12 @@ p {
   padding: clamp(24px, 4vw, 38px);
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: var(--green-soft);
+  background: var(--peach-soft);
 }
 
 .location-card h2 {
   margin-top: 10px;
+  color: var(--peach-ink);
 }
 
 .location-card p {
@@ -718,6 +839,7 @@ p {
   display: grid;
   gap: 14px;
   padding: clamp(20px, 4vw, 30px);
+  background: #fcfaff;
 }
 
 .contact-form h2 {
@@ -800,6 +922,14 @@ p {
 .info-card {
   margin-bottom: 16px;
   padding: clamp(20px, 4vw, 28px);
+}
+
+.info-card:nth-of-type(odd) {
+  background: var(--blue-soft);
+}
+
+.info-card:nth-of-type(even) {
+  background: var(--peach-soft);
 }
 
 .info-card h2 {
@@ -1012,11 +1142,16 @@ p {
   }
 
   .hero-grid {
-    gap: 24px;
+    gap: 20px;
   }
 
   .hero-image {
     aspect-ratio: 3 / 2;
+  }
+
+  .hero-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(30px, 8vw, 40px);
   }
 
   .lead {
@@ -1077,12 +1212,22 @@ p {
   }
 
   .site-footer {
-    padding: 18px 16px;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 16px;
   }
 
   .copyright {
     flex-direction: column;
     gap: 3px;
+  }
+
+  .footer-links {
+    gap: 10px 16px;
+  }
+
+  .contact-details a {
+    overflow-wrap: anywhere;
   }
 }
 
